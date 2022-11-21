@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { IProduct } from "types/products.type";
+import { IQuote } from "types/quote.type";
 import { genericResponse } from "types/response.type";
 import { queryKeys } from "./query-keys";
 
@@ -15,7 +16,7 @@ export const useProducts = () => {
 
 
 export const getQuotes = async () => {
-	const { data } = await axios.get('https://dummyjson.com/quotes?limit=3&skip=14');
+	const { data } = await axios.get<genericResponse<IQuote>>('https://dummyjson.com/quotes?limit=3&skip=14');
 	return data;
 }
 
