@@ -1,0 +1,10 @@
+@use 'sass:math';
+@use 'sass:string';
+@use 'utils' as *;
+
+@function relative($size, $width: 1440, $unit: '%') {
+	$relativeValue: math.div($size, $width);
+	$roundedValue: decimal-round($relativeValue * 100, 3);
+	$value: string.unquote($roundedValue + $unit);
+	@return $value;
+}
