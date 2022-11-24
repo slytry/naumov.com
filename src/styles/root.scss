@@ -1,6 +1,27 @@
 :root {
 	--fs: 16px;
-	--shadow: box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.36);
+	--shadow: box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.36);
 	--gap: 1rem;
 	font-size: 100%;
+
+	/* Color Theme Swatches in HSLA */
+	--rough-asphalt: #BDBFBF;
+	--black-wash: #0D0D0C;
+	--nero: #262625;
+	--poppy-pods: #735F58;
+	--bleached-silk: #F2F2F2;
+
+	/* Dark Color Theme */
+	--alpha: var(--bleached-silk);
+	--bravo: var(--black-wash);
+	--charlie: var(--rough-asphalt);
+
+	@media (prefers-color-scheme: dark) {
+		html {
+			color-scheme: dark;
+		}
+		--alpha: var(--black-wash);
+		--bravo: var(--bleached-silk);
+		--charlie: var(--nero);
+	}
 }

@@ -1,11 +1,11 @@
 import { dehydrate, QueryClient } from '@tanstack/react-query';
 import { queryKeys } from 'lib/api/query-keys';
-import { Home } from '../components/pages/Home';
 import { getProducts, getQuotes } from '../lib/api';
 import { config } from '../lib/react-query-config';
+import { Flexbox } from '@/pages/Flexbox';
 
-export default function HomePage() {
-  return <Home />;
+export default function FlexboxPage() {
+  return <Flexbox />;
 }
 
 export async function getStaticProps() {
